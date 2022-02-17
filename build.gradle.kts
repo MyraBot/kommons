@@ -8,7 +8,7 @@ plugins {
     `maven-publish`
 }
 
-val name = "Kommons"
+val lib = "kommons"
 group = "bot.myra"
 version = "1"
 
@@ -32,13 +32,13 @@ publishing {
             create<MavenPublication>("repo") {
                 group = project.group as String
                 version = project.version as String
-                artifactId = name
+                artifactId = lib
                 from(components["java"])
             }
         }
         maven {
             url = uri("https://systems.myra.bot/releases/")
-            name = "repo"
+            name = lib
             credentials {
                 username = System.getenv("REPO_NAME")
                 password = System.getenv("REPO_SECRET")
