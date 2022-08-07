@@ -10,7 +10,7 @@ plugins {
 
 val lib = "kommons"
 group = "bot.myra"
-version = "1"
+version = "1.1"
 
 repositories {
     mavenCentral()
