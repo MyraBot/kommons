@@ -40,8 +40,8 @@ publishing {
             url = uri("https://systems.myra.bot/releases/")
             name = lib
             credentials {
-                username = System.getenv("REPO_NAME")
-                password = System.getenv("REPO_SECRET")
+                username = property("REPO_NAME")?.toString()
+                password = property("REPO_SECRET")?.toString()
             }
             authentication { create<BasicAuthentication>("basic") }
         }
